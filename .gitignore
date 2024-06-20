@@ -1,0 +1,55 @@
+# Xcode
+.DS_Store
+build/
+DerivedData/
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+
+# Swift Package Manager
+.build/
+Packages/
+.swiftpm/xcode/package.resolved
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/Build/
+Carthage/Checkouts/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output/
+
+# Accio dependency manager
+Dependencies/
+.accio/
+
+# Flutter/Dart/Pub
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+
+# Other
+*.moved-aside
+*.swp
+*~
+*.log
+
+# Local git settings
+.idea/
+*.iml
+
+# Additional files specific to your project
+# User-specific workspace settings
+project.xcworkspace/xcuserdata/
+project.xcworkspace/xcshareddata/schemes/
+project.xcworkspace/xcshareddata/xcschemes/
