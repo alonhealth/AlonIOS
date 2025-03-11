@@ -68,39 +68,39 @@ public class AlonIOS {
         healthStore.execute(query)
     }
     
-    public func calculateHealthScore(completion: @escaping (Int) -> Void) {
-        fetchStepsData { steps in
-            fetchHRVData { hrv in
-                fetchSleepScore { sleepScore in
-                    var totalScore = 0
-                    
-                    if let sleepScore = sleepScore {
-                        if sleepScore >= 90 { totalScore += 40 }
-                        else if sleepScore >= 80 { totalScore += 35 }
-                        else if sleepScore >= 70 { totalScore += 30 }
-                        else if sleepScore >= 60 { totalScore += 20 }
-                        else if sleepScore >= 50 { totalScore += 15 }
-                        else if sleepScore >= 20 { totalScore += 10 }
-                    }
-                    
-                    if let hrv = hrv {
-                        if hrv >= 70 { totalScore += 30 }
-                        else if hrv >= 50 { totalScore += 20 }
-                        else if hrv >= 40 { totalScore += 10 }
-                        else if hrv > 20 { totalScore += 5 }
-                    }
-                    
-                    if let steps = steps {
-                        if steps >= 15000 { totalScore += 30 }
-                        else if steps >= 10000 { totalScore += 25 }
-                        else if steps >= 8000 { totalScore += 20 }
-                        else if steps >= 5000 { totalScore += 15 }
-                        else if steps >= 3000 { totalScore += 5 }
-                    }
-                    
-                    completion(totalScore)
+public func calculateHealthScore(completion: @escaping (Int) -> Void) {
+    self.fetchStepsData { steps in
+        self.fetchHRVData { hrv in  // Explicitly use self here
+            self.fetchSleepScore { sleepScore in  // Explicitly use self here
+                var totalScore = 0
+                
+                if let sleepScore = sleepScore {
+                    if sleepScore >= 90 { totalScore += 40 }
+                    else if sleepScore >= 80 { totalScore += 35 }
+                    else if sleepScore >= 70 { totalScore += 30 }
+                    else if sleepScore >= 60 { totalScore += 20 }
+                    else if sleepScore >= 50 { totalScore += 15 }
+                    else if sleepScore >= 20 { totalScore += 10 }
                 }
+                
+                if let hrv = hrv {
+                    if hrv >= 70 { totalScore += 30 }
+                    else if hrv >= 50 { totalScore += 20 }
+                    else if hrv >= 40 { totalScore += 10 }
+                    else if hrv > 20 { totalScore += 5 }
+                }
+                
+                if let steps = steps {
+                    if steps >= 15000 { totalScore += 30 }
+                    else if steps >= 10000 { totalScore += 25 }
+                    else if steps >= 8000 { totalScore += 20 }
+                    else if steps >= 5000 { totalScore += 15 }
+                    else if steps >= 3000 { totalScore += 5 }
+                }
+                
+                completion(totalScore)
             }
         }
     }
+}
 }
