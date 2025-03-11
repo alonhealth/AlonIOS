@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "AlonIOS"
-  spec.version      = "0.0.1"
+  spec.version      = "1.0.2"
   spec.summary      = "Alon Health iOS SDK."
   spec.swift_versions = ['5.0']
 
@@ -80,13 +80,13 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/alonhealth/AlonIOS.git", :branch => "main", :tag => '1.0.2' }
+  spec.source       = { :git => "https://github.com/alonhealth/AlonIOS.git", :branch => "main", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  CocoaPods is smart about how it includes source code. For source files
-  #  giving a folder will include any swift, h, m, mm, c & cpp files.
+
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
