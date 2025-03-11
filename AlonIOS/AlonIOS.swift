@@ -69,9 +69,9 @@ public class AlonIOS {
     }
     
     public func calculateHealthScore(completion: @escaping (Int) -> Void) {
-        fetchStepsData { steps in
-            fetchHRVData { hrv in
-                fetchSleepScore { sleepScore in
+        self.fetchStepsData { steps in
+            self.fetchHRVData { hrv in
+                self.fetchSleepScore { sleepScore in
                     var totalScore = 0
                     
                     if let sleepScore = sleepScore {
