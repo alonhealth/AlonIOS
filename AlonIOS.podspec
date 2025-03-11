@@ -80,7 +80,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/alonhealth/AlonIOS.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/alonhealth/AlonIOS.git", :branch => "main" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,8 +91,8 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files = "AlonIOS/**/*.{h,m,swift}"
-  spec.exclude_files = "AlonIOS/Exclude"
+  spec.source_files = '*.{h,swift}'
+  # spec.exclude_files = "AlonIOS/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
 
