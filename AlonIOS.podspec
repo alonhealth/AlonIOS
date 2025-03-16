@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "AlonIOS"
-  spec.version      = "1.0.3"
+  spec.version      = "1.0.4"
   spec.summary      = "Alon Health iOS SDK."
   spec.swift_versions = ['5.0']
 
@@ -91,7 +91,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files = '*.{h,swift}'
+  spec.source_files = 'Sources/*'
   # spec.exclude_files = "AlonIOS/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
