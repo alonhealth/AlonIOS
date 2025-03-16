@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "AlonIOS"
-  spec.version      = "1.0.2"
+  spec.version      = "1.0.3"
   spec.summary      = "Alon Health iOS SDK."
   spec.swift_versions = ['5.0']
 
